@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de code QR</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header>
+     
+    </header>
+    <div class="container">
+        <div class="header1">
+            <img src="photos/kirikou_logo.jpg" alt="logo">
+            <p>système de génération de QR <br> code pour les <br> <span class="bold"> cartes de fidélité Kirikoubf</span></p>
+          </div>
+        </header>
+        <h1>Générateur de QR code </h1>
+        <form id="qr-form">
+            <label for="card_number">Identifiant du client :</label>
+            <input type="text" id="card_number" name="card_number" required>
+            <label for="owner_name">Nom et prénom du propriétaire :</label>
+            <input type="text" id="owner_name" name="owner_name" required>
+            <label for="owner_name">Ville de residence :</label>
+            <input type="text" id="lieu" name="lieu" required>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            <label for="issue_date">Date de délivrance (YYYY-MM-DD) :</label>
+            <input type="text" id="issue_date" name="issue_date" required>
+            <label for="expiry_date">Date d'expiration (YYYY-MM-DD) :</label>
+            <input type="text" id="expiry_date" name="expiry_date" required>
+            <label for="comment">Identifiants et noms des utilisateurs secondaires :</label>
+            <textarea id="comment" name="comment"></textarea>
+            <div class="button">
+            <button type="button" onclick="generateQR()">Générer le code QR</button>
+            <button type="button" onclick="refreshPage()">Actualiser la page</button>
+            </div>
+        </form>
+        <div id="qr-code"></div>
+    </div>
+    <script src="js/qrcode.js"></script>
+    <script src="js/script.js"></script>
+
+    <footer></footer>
+</body>
+</html>
